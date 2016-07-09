@@ -1,0 +1,17 @@
+default['httpd']['version']['major'] = "2.2"
+default['httpd']['install_flavor'] = "yum"
+default['httpd']['doc_dir'] = "/var/www/html"
+default['httpd']['log_dir'] = "/var/log/httpd"
+default['httpd']['log_rotate'] = 31
+default['httpd']['mod_extract_forwarded']['enable'] = false
+default['httpd']['mod_php']['enable'] = false
+default['httpd']['mod_ssl']['enable'] = false
+default['httpd']['mod_ssl']['root_dir'] = "/etc/httpd/conf/ssl"
+default['httpd']['mod_ssl']['link_dir'] = "link_to"
+default['httpd']['mod_ssl']['server_key'] = "server.key"
+default['httpd']['mod_ssl']['server_crt'] = "server.crt"
+default['httpd']['mod_ssl']['chain_crt'] = "chain.crt"
+default['httpd']['mpm'] = "prefork"
+default['httpd']['conf']['template_dir'] = nil
+default['httpd']['user'] = "apache"
+default['httpd']['group']['add'] = nil

@@ -1,0 +1,10 @@
+<%= node['httpd']['log_dir'] %>/*log {
+    daily
+    rotate <%= node['httpd']['log_rotate'] %>
+    dateext
+    missingok
+    sharedscripts
+    postrotate
+        /etc/init.d/httpd reload > /dev/null 2>/dev/null || true
+    endscript
+}
